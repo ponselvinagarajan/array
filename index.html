@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>array1</title>
+</head>
+<body>
+<script>
+// 1. Write a JavaScript program to display the values (i.e. display book name, author name and reading status) of the following books. If the reading status  is true 
+
+var library = [  
+   { 
+       author: 'Bill Gates', 
+       title: 'The Road Ahead', 
+       readingStatus: true 
+   }, 
+   { 
+       author: 'Steve Jobs', 
+       title: 'Walter Isaacson', 
+       readingStatus: true 
+   }, 
+   { 
+       author: 'Suzanne Collins', 
+       title:  'Mockingjay: The Final Book of The Hunger Games',  
+       readingStatus: false 
+   }];
+   
+  
+  let c = library.filter(function(ele){
+	  return ele.readingStatus == true;
+  })
+  
+  console.log(c);
+  
+  
+  
+  
+  // 2. Write a code to replace the value 6 in the following object with 606,  
+
+let obj = { 
+
+foo: { a: "hello", b: "world" }, 
+
+bar: ["example", "mem", null, { xyz: 6 }, 88], 
+
+qux: [4, 8, 12] 
+
+}; 
+
+obj.bar[3].xyz=606;
+
+console.log(obj);
+///////////////////////////////////////////////////////////////////////////////////
+
+// 3.
+const users = [ 
+
+  { 
+
+    first_name: 'Mike', 
+
+    last_name: 'Sheridan' 
+
+  }, 
+
+  { 
+
+    first_name: 'Tim', 
+
+    last_name: 'Lee' 
+
+  }, 
+
+  { 
+
+    first_name: 'John', 
+
+    last_name: 'Carte' 
+
+  } 
+
+]; 
+
+let result = users.map((ele)=>{
+	return ele.first_name+ele.last_name;
+})
+console.log(result)
+
+// Using Map method 
+
+// output:['Mike Sheridan', 'Tim Lee', 'John Carte'] 
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// 4.
+
+const users1 = [ 
+
+  { 
+
+    first_name: 'Mike', 
+
+    last_name: 'Sheridan', 
+
+    age: 30 
+
+  }, 
+
+  { 
+
+    first_name: 'Tim', 
+
+    last_name: 'Lee', 
+
+    age: 45 
+
+  }, 
+
+  { 
+
+    first_name: 'John', 
+
+    last_name: 'Carte', 
+
+    age: 25 
+
+  } 
+
+]; 
+
+
+let result1 = users1.map((ele)=>{
+	return ele.last_name;
+})
+console.log(result1)
+
+
+// Using Map method 
+
+// Output:["Sheridan", "Lee", "Carte"] 
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+// 5.
+
+const users2 = [ 
+
+  { 
+
+    first_name: 'Mike', 
+
+    location: 'London' 
+
+  }, 
+
+  { 
+
+    first_name: 'Tim', 
+
+    location: 'US' 
+
+  }, 
+
+  { 
+
+    first_name: 'John', 
+
+    location: 'Australia' 
+
+  } 
+
+]; 
+
+let result2 = users2.map((ele)=>{
+	return `${ele.first_name} lives in ${ele.location}`
+})
+
+console.log(result2);
+// Using Map method 
+
+// ["Mike lives in London", "Tim lives in US", "John lives in Australia"] 
+
+////////////////////////////////////////////////////////////////////////////////////
+
+// 6.
+
+const employees = [ 
+
+  { name: 'David Carlson', age: 30 }, 
+
+  { name: 'John Cena', age: 34 }, 
+
+  { name: 'Mike Sheridan', age: 25 }, 
+
+  { name: 'John Carte', age: 50 } 
+
+]; 
+
+let result3 = employees.filter((ele)=>{return ele.age > 30})
+console.log(result3);
+
+// Using filter method 
+
+// Output:[ { name: "John Cena", age: 34 }, { name: "John Carte", age: 50 }] 
+
+
+// Using Filter Method: 
+
+  ////////////////////////////////////////////////////////////////////////////////////
+  
+
+// 7.
+
+
+const students = [ 
+
+  { name: 'Quincy', grade: 96 }, 
+
+  { name: 'Jason', grade: 84 }, 
+
+  { name: 'Alexis', grade: 100 }, 
+
+  { name: 'Sam', grade: 65 }, 
+
+  { name: 'Katie', grade: 90 } 
+
+]; 
+
+  let result4 = students.filter((ele)=> {return ele.grade >=90})
+  console.log(result4)
+
+// Output:[ { name: 'Quincy', grade: 96 }, { name: 'Alexis', grade: 100 }, { name: 'Katie', grade: 90 } ] 
+
+////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// 8. Using Filter Method: 
+
+  
+
+let users4 = [ 
+
+    { name: 'John', age: 25, occupation: 'gardener' }, 
+
+    { name: 'Lenny', age: 51, occupation: 'programmer' }, 
+
+    { name: 'Andrew', age: 43, occupation: 'teacher' }, 
+
+    { name: 'Peter', age: 81, occupation: 'teacher' }, 
+
+    { name: 'Anna', age: 47, occupation: 'programmer' }, 
+
+    { name: 'Albert', age: 76, occupation: 'programmer' }, 
+
+] 
+
+  let result5 = users4.filter((ele)=> {return ele.occupation == "programmer"})
+  console.log(result5)
+
+
+// Output:[ { name: 'Lenny', age: 51, occupation: 'programmer' }, { name: 'Anna', age: 47, occupation: 'programmer' }, 
+
+    // { name: 'Albert', age: 76, occupation: 'programmer' },]	
+</script>	
+</body>
+</html>	
